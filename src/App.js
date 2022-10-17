@@ -1,4 +1,3 @@
-
 import { Routes, Route } from 'react-router-dom';
 import CombatPage from './routes/combat-page/combat-page.component';
 import Navigation from './routes/navigation/navigation.component';
