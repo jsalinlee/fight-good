@@ -29,7 +29,6 @@ const InitiativeList = () =>{
         <div className="initiative-list-container">
             {listItems.map((item)=>(
                 <InitiativeListItems key={item.id} item={item}/>
-                
             ))}
         </div>
     );
