@@ -1,9 +1,12 @@
-
+import PlayerInput from "../../components/player-input/player-input.component";
 
 const InitiativeSetup = () =>{
 
     return (
-        <div>This is where initiative setup goes</div>
+        <div>
+            <PlayerInput />
+            This is where initiative setup goes
+        </div>
     )
 
 
