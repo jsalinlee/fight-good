@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import CombatPage from './routes/combat-page/combat-page.component';
+import Navigation from './routes/navigation/navigation.component';
+import InitiativeSetup from './routes/initiative-setup/initiative-setup.component';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const App = () => {
+    return (
+      <Routes>
+        <Route path='/' element={<Navigation />} >
+            <Route index element={<InitiativeSetup />} />
+            <Route path='combatpage' element={<CombatPage/>} />
+        </Route>
+      </Routes>
+    );
+  };
 
 export default App;
