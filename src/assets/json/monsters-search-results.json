@@ -1,0 +1,53 @@
+[
+    {
+        "name": "Baphomet",
+        "cr": 23,
+        "size": "Huge",
+        "type": "Fiend",
+        "tags": "Demon",
+        "section": "Demon Lords",
+        "alignment": "chaotic evil",
+        "environment": "",
+        "ac": 22,
+        "hp": 333,
+        "init": 2,
+        "lair?": "",
+        "legendary": "legendary",
+        "unique": "unique",
+        "sources": "Out of the Abyss: 235"
+    },
+    {
+        "name": "Bridesmaid of Zuggtmoy",
+        "cr": "1/8",
+        "size": "Medium",
+        "type": "Plant",
+        "tags": "",
+        "section": "",
+        "alignment": "chaotic evil",
+        "environment": "",
+        "ac": 13,
+        "hp": 22,
+        "init": 0,
+        "lair?": "",
+        "legendary": "",
+        "unique": "",
+        "sources": "Out of the Abyss: 230"
+    },
+    {
+        "name": "Chamberlain of Zuggtmoy",
+        "cr": 2,
+        "size": "Large",
+        "type": "Plant",
+        "tags": "",
+        "section": "",
+        "alignment": "chaotic evil",
+        "environment": "",
+        "ac": 13,
+        "hp": 45,
+        "init": -2,
+        "lair?": "",
+        "legendary": "",
+        "unique": "",
+        "sources": "Out of the Abyss: 230"
+    }
+]
