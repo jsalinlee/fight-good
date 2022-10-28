@@ -2,6 +2,7 @@ import monsterSearchResultsJSON from '../../assets/json/monsters-search-results.
 
 import './monster-search-box.styles.scss';
 
+
 const MonsterSearchBox = () => {
     const searchResults = monsterSearchResultsJSON;
     return (
@@ -23,6 +24,7 @@ const MonsterSearchBox = () => {
                     </div>
                 ))}
             </div>
+
         </div>
     );
 };
