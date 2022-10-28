@@ -29,10 +29,10 @@ const subtractObject = (listObjects,objectToSubtract) =>{
         if(listObject.name===objectToSubtract.name){
             if(listObject.quantity-1 <= 0)
                return false;
-        }   
+        }
         return true;
     })
-        
+
     return updateCart.map((listObject)=>listObject.name===objectToSubtract.name ? {...listObject, quantity:listObject.quantity - 1} : listObject);
 }
 
@@ -40,16 +40,16 @@ const subtractObject = (listObjects,objectToSubtract) =>{
 
 export const addListObject = (listObjects, objectToAdd) =>{
     const updatedList = addObject(listObjects, objectToAdd);
-    return createAction(LIST_ACTION_TYPES.SET_CART_ITEMS, updatedList);
+    return createAction(LIST_ACTION_TYPES.SET_LIST_ITEMS, updatedList);
 }
 
 export const subtractListObject = (listObjects, objectToSubtract) =>{
     const updatedList = subtractObject(listObjects,objectToSubtract);
-    return createAction(LIST_ACTION_TYPES.SET_CART_ITEMS, updatedList);
+    return createAction(LIST_ACTION_TYPES.SET_LIST_ITEMS, updatedList);
 }
 
 export const deleteListObject = (listObjects, objectToDelete) =>{
     const updatedList = deleteObject(listObjects,objectToDelete);
-    return createAction(LIST_ACTION_TYPES.SET_CART_ITEMS, updatedList);
+    return createAction(LIST_ACTION_TYPES.SET_LIST_ITEMS, updatedList);
 }
 
