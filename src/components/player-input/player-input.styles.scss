@@ -1,6 +1,7 @@
 .player-input-container {
-    width: 400px;
+    margin: 50px;
     font-family: "Cabin";
+    box-sizing: border-box;
 }
 
 .player-input-fields-container {
@@ -13,24 +14,29 @@
     justify-content: space-between;
     padding: 10px 20px;
     width: 100%;
+    box-sizing: border-box;
 
     button {
-        margin: auto;
         height: 40px;
         width: 40px;
-        margin-left: 20px;
+        margin: auto 0;
+        box-sizing: border-box;
     }
 }
 
 
 .input-field-container {
     text-align: left;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 
     .player-name-input {
         font-family: "Cabin";
         font-size: 14px;
         padding: 10px;
         width: 80%;
+        outline: none;
     }
 
     .player-initiative-input {
@@ -40,6 +46,8 @@
         height: 40px;
         width: 40px;
         box-sizing: border-box;
+        text-align: center;
+        align-self: center;
 
         &:focus {
             outline: none;
@@ -55,8 +63,4 @@
             -moz-appearance: textfield;
         }
     }
-}
-
-.player-initiative-input-container {
-    text-align: center;
 }
