@@ -1,5 +1,6 @@
-import InitiativeList from "../../components/initiative-list.component/initiative-list.component";
+import InitiativeList from "../../components/initiative-list/initiative-list.component";
 import PlayerInput from "../../components/player-input/player-input.component";
+import MonsterSearchBox from "../../components/monster-search-box/monster-search-box.component";
 
 const InitiativeSetup = () =>{
     return (
@@ -7,6 +8,7 @@ const InitiativeSetup = () =>{
             <PlayerInput />
             This is where initiative setup goes
             <InitiativeList />
+            <MonsterSearchBox />
         </div>
     )
 }
