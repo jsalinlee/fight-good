@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { listStateReducer } from './list-objects.js/list-objects.reducer';
+import { initiativeListReducer } from './initiative-list/initiative-list.reducer';
 
 export const rootReducer = combineReducers({
-    listState: listStateReducer,
-})
+    initiativeList: initiativeListReducer,
+});
