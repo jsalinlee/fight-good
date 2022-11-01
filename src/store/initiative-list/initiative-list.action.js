@@ -2,6 +2,18 @@ import { createAction } from '../../utils/reducer/reducer.utils';
 import { INITIATIVE_LIST_ACTION_TYPES } from './initiative-list.types';
 
 const addInitiativeItem = (initiativeListItems, itemToAdd) => {
+    if (itemToAdd.hasOwnProperty('isPlayer')) {
+        const existingPlayer = initiativeListItems.find(
+            (listItem) => itemToAdd.name === listItem.name
+        );
+        if (existingPlayer) {
+            alert(
+                `Player ${existingPlayer.name} already exists in the initiative order`
+            );
+            return initiativeListItems;
+        }
+        return [...initiativeListItems, itemToAdd];
+    }
     const existingItem = initiativeListItems.find(
         (listItem) => listItem.name === itemToAdd.name
     );
