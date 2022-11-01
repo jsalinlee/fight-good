@@ -36,29 +36,14 @@ const MonsterSearchBox = () => {
     return (
         <div className='monster-search-box-container'>
             <div className='monster-search-header-container'>
-                <span>Monster Lookup</span>
+                <span className='search-header-title'>Monster Lookup</span>
                 <input
                     onChange={onSearchChange}
                     type='text'
                     placeholder='input monster'
                     className='monster-search-field'></input>
             </div>
-            <div className='monster-search-items-container'>
-                {console.log(searchField)}
-                <MonsterSearchList monsterList={filteredMonsters} />
-
- {/*               {searchResults.map((searchResultItem) => (
-                    <div
-                        key={searchResultItem.name}
-                        className='search-result-item'>
-                        <div>{searchResultItem.name}</div>
-                        <div>{searchResultItem.cr}</div>
-
-                    </div>
-                ))}
-*/}
-            </div>
-
+            <MonsterSearchList monsterList={filteredMonsters} />
         </div>
     );
 };
