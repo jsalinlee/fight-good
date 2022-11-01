@@ -5,28 +5,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin:2px;
-    align-text
+    margin:1px;
+    padding-left: 3px;
+    padding-right:3px;
+    align-items:center;
+  
     
 
-    .monster-name{
-        background-color: greenyellow;
-        color:red;
-        width:30%;
-    }
-
-    .monster-cr{
-        color:pink;
-        
+    .monster-name, .monster-cr, .monster-size, .monster-type{
+        //background-color: greenyellow;
+        color:cyan;
+        width:20%;
 
     }
 
-    .monster-size{
-        color:pink;
-    }
-    .monster-type{
-        color:pink;
-    }
+
     .monster-add-to-list{
         font-size:200%;
     }

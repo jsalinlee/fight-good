@@ -12,13 +12,18 @@
         position:sticky;
         display: flex;
         top: 0;
+        align-items:center;
+        padding:5px;
 
         .search-header-title{
-            width:40%;
+            width:65%;
+            font-size:150%;
+            
             margin-left: 1%;
         }
 
         .monster-search-field{
+
             width: 30%;
             
         }
