@@ -40,7 +40,6 @@
     }
 
     .player-initiative-input {
-        direction: rtl;
         font-family: "Cabin";
         font-size: 14px;
         height: 40px;
@@ -53,11 +52,11 @@
             outline: none;
         }
 
-        &::-webkit-outer-spin-button,
-        &::-webkit-inner-spin-button {
-          -webkit-appearance: none;
-          margin: 0;
-        }
+        // &::-webkit-outer-spin-button,
+        // &::-webkit-inner-spin-button {
+        //   -webkit-appearance: none;
+        //   margin: 0;
+        // }
 
         &[type=number] {
             -moz-appearance: textfield;
