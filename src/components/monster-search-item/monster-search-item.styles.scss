@@ -9,8 +9,8 @@
     padding-left: 3px;
     padding-right:3px;
     align-items:center;
-  
-    
+
+
 
     .monster-name, .monster-cr, .monster-size, .monster-type{
         //background-color: greenyellow;
@@ -21,7 +21,7 @@
 
 
     .monster-add-to-list{
-        font-size:200%;
+        font-size:150%;
     }
 
 }
@@ -41,6 +41,6 @@
 <span className="monster-cr">{monster.cr}</span>
 <span className="monster-size">{monster.size}</span>
 <span className="monster-type">{monster.type}</span>
-<Link className='monster-add-to-list' 
+<Link className='monster-add-to-list'
 
 */

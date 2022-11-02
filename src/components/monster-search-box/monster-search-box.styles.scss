@@ -1,10 +1,11 @@
 .monster-search-box-container{
     background-color: yellow;
     color: red;
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
     height:50vh;
     overflow: scroll;
+    margin-left: 5%;
 
 
     .monster-search-header-container{
@@ -18,17 +19,17 @@
         .search-header-title{
             width:65%;
             font-size:150%;
-            
+
             margin-left: 1%;
         }
 
         .monster-search-field{
 
             width: 30%;
-            
+
         }
     }
-    
+
 
 }
 
