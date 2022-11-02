@@ -1,0 +1,27 @@
+.monster-search-item-container{
+    background-color: purple;
+    color: white;
+    font-size: 125%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:1px;
+    padding-left: 3px;
+    padding-right:3px;
+    align-items:center;
+
+
+
+    .monster-name, .monster-cr, .monster-size, .monster-type{
+        //background-color: greenyellow;
+        color:cyan;
+        width:20%;
+
+    }
+
+
+    .monster-add-to-list{
+        font-size:150%;
+    }
+
+}

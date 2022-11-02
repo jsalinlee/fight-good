@@ -1,4 +1,18 @@
-.initiative-setup-container {
-    display: flex;
+
+.initiative-setup-wrapper{
+    display:flex;
     flex-direction: row;
+
+}
+
+.initiative-list-block-wrapper{
+    width:100%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+
+    .clear-list-button{
+        width: 30%;
+    }
 }

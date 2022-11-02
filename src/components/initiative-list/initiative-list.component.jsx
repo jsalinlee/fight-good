@@ -1,39 +1,20 @@
-import InitiativeListItems from "../initiative-list-items/initiative-list-items.component";
+import { useSelector } from 'react-redux';
+import InitiativeListItems from '../initiative-list-items/initiative-list-items.component';
+import { selectInitiativeListItems } from '../../store/initiative-list/initiative-list.selector';
 import './initiative-list.styles.scss';
 
-const listItems = [
-    {
-      "name": 'Goblin',
-      "id": 1
-    },
-    {
-        "name": 'Bugbear',
-        "id": 2
-    },
-    {
-        "name": 'Aboleth',
-        "id": 3
-    },
-    {
-        "name": 'Ancient Copper Dragon',
-        "id": 4
-    },
-    {
-        "name": 'Squirrel',
-        "id": 5
-    }
-  ]
-
-const InitiativeList = () =>{
-    return(
-        <div className="initiative-list-container">
-            {listItems.map((item)=>(
-                <InitiativeListItems key={item.id} item={item}/>
-                
+const InitiativeList = () => {
+    const listItems = useSelector(selectInitiativeListItems);
+    return (
+        <div className='initiative-list-container'>
+            {listItems.map((item) => (
+                <InitiativeListItems
+                    key={`${item.name}+${item.sources}`}
+                    item={item}
+                />
             ))}
         </div>
     );
-
-}
+};
 
 export default InitiativeList;

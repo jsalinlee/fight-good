@@ -1,13 +1,35 @@
 .monster-search-box-container{
     background-color: yellow;
     color: red;
+    width: 75%;
+    margin: 0 auto;
+    height:50vh;
+    overflow: scroll;
+    margin-left: 5%;
+
+
+    .monster-search-header-container{
+        background-color: blue;
+        position:sticky;
+        display: flex;
+        top: 0;
+        align-items:center;
+        padding:5px;
+
+        .search-header-title{
+            width:65%;
+            font-size:150%;
+
+            margin-left: 1%;
+        }
+
+        .monster-search-field{
+
+            width: 30%;
+
+        }
+    }
+
+
 }
 
-.monster-search-header-container{
-    background-color: blue;
-}
-
-.monster-search-field{
-    width: 300px;
-    margin-left: 500px;
-}

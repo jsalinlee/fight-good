@@ -1,6 +1,8 @@
 import { createAction } from '../../utils/reducer/reducer.utils';
 import { INITIATIVE_LIST_ACTION_TYPES } from './initiative-list.types';
+import { INITIATIVE_LIST_INITIAL_STATE } from './initiative-list.reducer';
 
+//CHANGE NAME BACK TO ID WHEN WE FIX IT
 const addInitiativeItem = (initiativeListItems, itemToAdd) => {
     if (itemToAdd.hasOwnProperty('isPlayer')) {
         const existingPlayer = initiativeListItems.find(
@@ -20,7 +22,7 @@ const addInitiativeItem = (initiativeListItems, itemToAdd) => {
 
     if (existingItem) {
         return initiativeListItems.map((listItem) =>
-            listItem.id === itemToAdd.id
+            listItem.name === itemToAdd.name
                 ? { ...listItem, quantity: listItem.quantity + 1 }
                 : listItem
         );
@@ -28,13 +30,7 @@ const addInitiativeItem = (initiativeListItems, itemToAdd) => {
     return [...initiativeListItems, { ...itemToAdd, quantity: 1 }];
 };
 
-const removeInitiativeItem = (initiativeListItems, objectToRemove) => {
-    return initiativeListItems.filter(
-        (listItem) => listItem.name !== objectToRemove.name
-    );
-};
-
-const clearInitiativeItem = (initiativeListItems, objectToSubtract) => {
+const removeInitiativeItem = (initiativeListItems, objectToSubtract) => {
     let newInitiativeList = initiativeListItems;
 
     newInitiativeList = initiativeListItems.filter((listItem) => {
@@ -48,6 +44,12 @@ const clearInitiativeItem = (initiativeListItems, objectToSubtract) => {
         listItem.name === objectToSubtract.name
             ? { ...listItem, quantity: listItem.quantity - 1 }
             : listItem
+    );
+};
+
+const clearInitiativeItem = (initiativeListItems, objectToRemove) => {
+    return initiativeListItems.filter(
+        (listItem) => listItem.name !== objectToRemove.name
     );
 };
 
@@ -75,6 +77,18 @@ export const clearItemFromInitiative = (initiativeListItems, itemToClear) => {
         initiativeListItems,
         itemToClear
     );
+    return createAction(
+        INITIATIVE_LIST_ACTION_TYPES.SET_INITIATIVE_LIST_ITEMS,
+        newInitiativeList
+    );
+};
+
+export const clearAllInitiativeItems = (listItem) => {
+    let newInitiativeList = listItem;
+
+    if (window.confirm('Are you sure?'))
+        newInitiativeList = INITIATIVE_LIST_INITIAL_STATE.initiativeListItems;
+
     return createAction(
         INITIATIVE_LIST_ACTION_TYPES.SET_INITIATIVE_LIST_ITEMS,
         newInitiativeList
