@@ -11,7 +11,7 @@ const InitiativeSetup = () => {
     const dispatch = useDispatch();
     const listItems = useSelector(selectInitiativeListItems);
 
-    const clearList = () => dispatch(clearAllInitiativeItems());
+    const clearList = () => dispatch(clearAllInitiativeItems(listItems));
 
     return (
         <div className='initiative-setup-wrapper'>
