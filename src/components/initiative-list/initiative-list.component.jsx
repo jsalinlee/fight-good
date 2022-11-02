@@ -1,14 +1,14 @@
 import { useSelector } from 'react-redux';
-import InitiativeListItems from '../initiative-list-items/initiative-list-items.component';
+import InitiativeListItem from '../initiative-list-items/initiative-list-item.component';
 import { selectInitiativeListItems } from '../../store/initiative-list/initiative-list.selector';
 import './initiative-list.styles.scss';
 
 const InitiativeList = () => {
-    const listItems = useSelector(selectInitiativeListItems);
+    const initiativeListItems = useSelector(selectInitiativeListItems);
     return (
         <div className='initiative-list-container'>
-            {listItems.map((item) => (
-                <InitiativeListItems
+            {initiativeListItems.map((item) => (
+                <InitiativeListItem
                     key={`${item.name}+${item.sources}`}
                     item={item}
                 />

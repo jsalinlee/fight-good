@@ -1,12 +1,13 @@
-import { Link } from 'react-router-dom';
-import './initiative-list-items.styles.scss';
 import { useSelector, useDispatch } from 'react-redux';
+
 import {
     addItemToInitiative,
     removeItemFromInitiative,
     clearItemFromInitiative,
 } from '../../store/initiative-list/initiative-list.action';
 import { selectInitiativeListItems } from '../../store/initiative-list/initiative-list.selector';
+
+import './initiative-list-item.styles.scss';
 
 const InitiativeListItem = ({ item }) => {
     const { name, quantity } = item;
