@@ -1,18 +1,19 @@
-import InitiativeList from "../../components/initiative-list/initiative-list.component";
-import PlayerInput from "../../components/player-input/player-input.component";
-import MonsterSearchBox from "../../components/monster-search-box/monster-search-box.component";
+import InitiativeList from '../../components/initiative-list/initiative-list.component';
+import PlayerInput from '../../components/player-input/player-input.component';
+import MonsterSearchBox from '../../components/monster-search-box/monster-search-box.component';
+
 import './initiative-setup.styles.scss';
 
-const InitiativeSetup = () =>{
+const InitiativeSetup = () => {
     return (
-        <div>
-            <PlayerInput />
-            <div className="initiative-setup-wrapper">
+        <div className='initiative-setup-wrapper'>
+            <div className='sidebar-container'>
+                <PlayerInput />
                 <InitiativeList />
-                <MonsterSearchBox />
             </div>
+            <MonsterSearchBox />
         </div>
-    )
-}
+    );
+};
 
 export default InitiativeSetup;

@@ -1,4 +1,0 @@
-export const LIST_ACTION_TYPES = {
-    SET_LIST_ITEMS: 'cart/SET_LIST_ITEMS',
-    SET_LIST_COUNT: 'cart/SET_LIST_COUNT',
-}

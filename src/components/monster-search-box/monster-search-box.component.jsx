@@ -1,13 +1,13 @@
 import monstersJSON from '../../assets/json/monsters.json';
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import MonsterSearchList from '../monster-search-list/monster-search-list.component';
 import './monster-search-box.styles.scss';
 
 
 const MonsterSearchBox = () => {
     const searchResults = monstersJSON;
- //   const [monsters] = useState([]);
-    const[searchField, setSearchField] = useState('');
+    //   const [monsters] = useState([]);
+    const [searchField, setSearchField] = useState('');
     const [filteredMonsters, setFilterMonsters] = useState([]);
 
     /*
@@ -17,9 +17,9 @@ const MonsterSearchBox = () => {
             .then((monster)=>console.log(monster.name));
     }, [])
 */
-    useEffect(()=>{
-        const newFilteredMonsters = searchResults.filter((monster)=>{
-            if(searchField !== '')
+    useEffect(() => {
+        const newFilteredMonsters = searchResults.filter((monster) => {
+            if (searchField !== '')
                 return monster.name.toLocaleLowerCase().includes(searchField);
         })
 
@@ -27,7 +27,7 @@ const MonsterSearchBox = () => {
 
     }, [searchField]);
 
-    const onSearchChange = (event) =>{
+    const onSearchChange = (event) => {
         const searchFieldString = event.target.value.toLocaleLowerCase();
         setSearchField(searchFieldString);
     }
