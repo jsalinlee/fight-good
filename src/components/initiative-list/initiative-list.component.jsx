@@ -8,7 +8,10 @@ const InitiativeList = () => {
     return (
         <div className='initiative-list-container'>
             {listItems.map((item) => (
-                <InitiativeListItems key={item.id} item={item} />
+                <InitiativeListItems
+                    key={`${item.name}+${item.sources}`}
+                    item={item}
+                />
             ))}
         </div>
     );

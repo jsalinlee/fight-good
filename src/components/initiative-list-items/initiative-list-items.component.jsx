@@ -25,29 +25,29 @@ const InitiativeListItem = ({ item }) => {
         <div className='initiative-list-items-container'>
             <div className='list-item-name'>{name}</div>
             <span>
-                <Link
+                <button
                     className='field-value-change'
                     style={{ textDecoration: 'none' }}
                     onClick={addItemToList}>
                     <b>+</b>
-                </Link>
+                </button>
                 <input
                     className='quantity-input-field'
                     type='number'
                     value={quantity}
                 />
-                <Link
+                <button
                     className='field-value-change'
                     style={{ textDecoration: 'none' }}
                     onClick={subtractItemFromList}>
                     <b>-</b>
-                </Link>
-                <Link
+                </button>
+                <button
                     className='item-delete-button'
                     style={{ textDecoration: 'none' }}
                     onClick={clearItemFromList}>
                     <b>X</b>
-                </Link>
+                </button>
             </span>
         </div>
     );
