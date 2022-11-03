@@ -71,7 +71,7 @@ const PlayerInput = () => {
                     />
                 </div>
                 <button className='add-player' onClick={addPlayerToInitiative}>
-                    &#10133;
+                    +
                 </button>
             </div>
         </div>

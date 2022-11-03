@@ -1,17 +1,25 @@
 
-.initiative-setup-wrapper{
+.content-wrapper{
     display:flex;
     flex-direction: row;
+
+    justify-content: space-around;
+
+    .sidebar-container {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main-container {
+        width: 65%;
+    }
 }
 
-.initiative-list-block-wrapper{
-    width:100%;
-    margin-left: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-end;
-
-    .clear-list-button{
-        width: 30%;
+.footer-wrapper {
+    button {
+        float: right;
+        margin-right:100px;
     }
 }

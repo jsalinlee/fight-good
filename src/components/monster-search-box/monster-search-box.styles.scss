@@ -1,13 +1,14 @@
 .monster-search-box-container{
+
     background-color: var(--boxBackground);
     color: var(--fontColor);
     width: 75%;
-    margin: 0 auto;
-    height:50vh;
-    overflow: scroll;
+    margin: 40px auto;
+    height:60vh;
     margin-left: 5%;
     border:var(--baseBorder);
-border-radius: var(--baseBorder-radius);
+    border-radius: var(--baseBorder-radius);
+
 
 
     .monster-search-header-container{
@@ -22,8 +23,7 @@ border-radius: var(--baseBorder-radius);
 
         .search-header-title{
             width:65%;
-            font-size:150%;
-
+            font-size: 150%;
             margin-left: 1%;
         }
 

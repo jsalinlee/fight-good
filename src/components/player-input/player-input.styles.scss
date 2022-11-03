@@ -1,8 +1,5 @@
 .player-input-container {
-    margin: 5%;
     font-family: "Cabin";
-    box-sizing: border-box;
-    width: 100%;
 }
 
 .player-input-fields-container {
@@ -22,6 +19,10 @@
         width: 40px;
         margin: auto 0;
         box-sizing: border-box;
+    }
+
+    .add-player {
+        font-size: 24px;
     }
 }
 

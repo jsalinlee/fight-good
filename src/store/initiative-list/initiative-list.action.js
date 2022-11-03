@@ -47,6 +47,17 @@ const removeInitiativeItem = (initiativeListItems, objectToSubtract) => {
     );
 };
 
+const updateInitiativeItem = (initiativeListItems, updatedItem) => {
+    const existingItem = initiativeListItems.find(
+        (listItem) => updatedItem.name === listItem.name
+    );
+    if (existingItem) {
+        return initiativeListItems.map((listItem) =>
+            listItem.name === updatedItem.name ? updatedItem : listItem
+        );
+    }
+};
+
 const clearInitiativeItem = (initiativeListItems, objectToRemove) => {
     return initiativeListItems.filter(
         (listItem) => listItem.name !== objectToRemove.name
@@ -65,6 +76,17 @@ export const removeItemFromInitiative = (initiativeListItems, itemToRemove) => {
     const newInitiativeList = removeInitiativeItem(
         initiativeListItems,
         itemToRemove
+    );
+    return createAction(
+        INITIATIVE_LIST_ACTION_TYPES.SET_INITIATIVE_LIST_ITEMS,
+        newInitiativeList
+    );
+};
+
+export const updateItemInInitiative = (initiativeListItems, updatedItem) => {
+    const newInitiativeList = updateInitiativeItem(
+        initiativeListItems,
+        updatedItem
     );
     return createAction(
         INITIATIVE_LIST_ACTION_TYPES.SET_INITIATIVE_LIST_ITEMS,
