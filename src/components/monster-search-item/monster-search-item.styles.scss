@@ -1,6 +1,5 @@
 .monster-search-item-container{
-    background-color: purple;
-    color: white;
+    background-color: var(--itemBackground);
     font-size: 125%;
     display: flex;
     flex-direction: row;
@@ -9,12 +8,13 @@
     padding-left: 3px;
     padding-right:3px;
     align-items:center;
+    border:var(--itemBorder);
+    border-radius: var(--baseBorder-radius);
 
 
 
     .monster-name, .monster-cr, .monster-size, .monster-type{
-        //background-color: greenyellow;
-        color:cyan;
+        color:var(--fontColor);
         width:20%;
 
     }

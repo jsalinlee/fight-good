@@ -1,15 +1,19 @@
 .monster-search-box-container{
-    background-color: yellow;
-    color: red;
+    background-color: var(--boxBackground);
+    color: var(--fontColor);
     width: 75%;
     margin: 0 auto;
     height:50vh;
     overflow: scroll;
     margin-left: 5%;
+    border:var(--baseBorder);
+border-radius: var(--baseBorder-radius);
 
 
     .monster-search-header-container{
-        background-color: blue;
+        background-color: var(--boxTitleBackground);
+        border: var(--baseBorder);
+        border-radius: var(--baseBorder-radius);
         position:sticky;
         display: flex;
         top: 0;

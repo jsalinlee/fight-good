@@ -6,9 +6,9 @@
 }
 
 .player-input-fields-container {
-    background: #F7B9F9;
-    border: 1px solid black;
-    border-radius: 5px;
+    background: var(--boxTitleBackground);
+    border: var(--baseBorder);
+    border-radius: var(--baseBorder-radius);
     display: flex;
     font-family: "Cabin";
     font-size: 18px;
