@@ -1,0 +1,44 @@
+.list-item-name{
+    color:purple;
+    font-size:17px;
+    font-weight:600;
+}
+
+.initiative-list-items-container {
+    background-color: greenyellow;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+
+    .initiative-list-action-bar {
+        width: 100%;
+        display:flex;
+        justify-content:space-between;
+
+        .quantity-input-bar {
+            display: flex;
+        }
+    }
+}
+
+.quantity-input-field{
+    width: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.field-value-change{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+    color: green;
+}
+
+.item-delete-button{
+    margin-left: 90px;
+    margin-right: 5px;
+    font-size: 20px;
+    color: red;
+}

@@ -1,19 +1,29 @@
-import { useSelector } from 'react-redux';
-import InitiativeListItems from '../initiative-list-items/initiative-list-items.component';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { clearAllInitiativeItems } from '../../store/initiative-list/initiative-list.action';
 import { selectInitiativeListItems } from '../../store/initiative-list/initiative-list.selector';
+import InitiativeListItem from '../initiative-list-item/initiative-list-item.component';
+
 import './initiative-list.styles.scss';
 
 const InitiativeList = () => {
-    const listItems = useSelector(selectInitiativeListItems);
+    const dispatch = useDispatch();
+    const initiativeListItems = useSelector(selectInitiativeListItems);
+    const clearList = () => dispatch(clearAllInitiativeItems());
     return (
-        <div className='initiative-list-container'>
-            {listItems.map((item) => (
-                <InitiativeListItems
-                    key={`${item.name}+${item.sources}`}
-                    item={item}
-                />
-            ))}
-        </div>
+        <>
+            <div className='initiative-list-container'>
+                {initiativeListItems.map((item) => (
+                    <InitiativeListItem
+                        key={`${item.name}+${item.sources}`}
+                        item={item}
+                    />
+                ))}
+            </div>
+            <button className='clear-list-button' onClick={clearList}>
+                Delete List
+            </button>
+        </>
     );
 };
 
