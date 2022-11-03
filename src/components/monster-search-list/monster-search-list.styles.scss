@@ -1,8 +1,6 @@
-.monster-search-list-container{
-
-    max-height: 50vh;
+.monster-search-list-container {
+    height: 100%;
     display: flex;
     flex-direction: column;
-
-
+    overflow-y: auto;
 }
