@@ -1,3 +1,17 @@
+:root{
+    --baseBackground: #212139;
+    --boxBackground: #7f4c81;
+    --boxTitleBackground: #571a58;
+    --itemBackground: #39244d;
+    --fontColor:rgb(255, 255, 255);
+
+
+    --baseBorder: 1px solid rgb(178, 235, 121);
+    --itemBorder: 1px solid rgb(84, 131, 212);
+    --baseBorder-radius: 5px;
+
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Cabin', 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +19,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--baseBackground);
+  height: 100vh;
 }
 
 code {

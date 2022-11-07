@@ -1,12 +1,22 @@
 .monster-search-box-container{
-    background-color: yellow;
-    color: red;
-    margin: 40px auto;
-    height:60vh;
+
+    background-color: var(--boxBackground);
+    color: var(--fontColor);
+    width: 75%;
+
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    border:var(--baseBorder);
+    border-radius: var(--baseBorder-radius);
+
 
 
     .monster-search-header-container{
-        background-color: blue;
+        background-color: var(--boxTitleBackground);
+        border: var(--baseBorder);
+        border-radius: var(--baseBorder-radius);
         position:sticky;
         display: flex;
         top: 0;
