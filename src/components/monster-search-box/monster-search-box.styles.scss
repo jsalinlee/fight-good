@@ -3,8 +3,10 @@
     background-color: var(--boxBackground);
     color: var(--fontColor);
     width: 75%;
-    margin: 40px auto;
-    height:60vh;
+
+    height:100%;
+    display: flex;
+    flex-direction: column;
     margin-left: 5%;
     border:var(--baseBorder);
     border-radius: var(--baseBorder-radius);

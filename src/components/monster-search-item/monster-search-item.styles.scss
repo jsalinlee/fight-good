@@ -13,7 +13,12 @@
 
 
 
-    .monster-name, .monster-cr, .monster-size, .monster-type{
+    .monster-name{
+        width:60%;
+        color:var(--fontColor);
+    }
+
+    .monster-cr, .monster-size, .monster-type{
         color:var(--fontColor);
         width:20%;
 

@@ -1,16 +1,18 @@
 .list-item-name{
-    color:purple;
+    color:var(--fontColor);
     font-size:17px;
     font-weight:600;
 }
 
 .initiative-list-items-container {
-    background-color: greenyellow;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 5px;
-    padding-left: 15px;
-    padding-bottom: 5px;
+    background-color: var(--itemBackground);
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 3px;
+    //padding-left: 15px;
+    padding: 15px;
+    border:var(--itemBorder);
+    border-radius:var(--baseBorder-radius);
 
     .initiative-list-action-bar {
         width: 100%;

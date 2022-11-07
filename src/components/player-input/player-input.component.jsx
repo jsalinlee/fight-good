@@ -42,11 +42,7 @@ const PlayerInput = () => {
 
     return (
         <div className='player-input-container'>
-            <h3>
-                <span className='player-input-label'>
-                    Enter Player Initiatives
-                </span>
-            </h3>
+            <div className='player-input-label'>Enter Player Initiatives</div>
             <div className='player-input-fields-container'>
                 <div className='input-field-container'>
                     <label className='player-name-label'>Player Name</label>

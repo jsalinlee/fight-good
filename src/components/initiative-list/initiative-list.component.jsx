@@ -13,6 +13,11 @@ const InitiativeList = () => {
     return (
         <>
             <div className='initiative-list-container'>
+                <div className='initiative-list-header'>
+                    <span className='initiative-list-title'>
+                        Initiative List
+                    </span>
+                </div>
                 {initiativeListItems.map((item) => (
                     <InitiativeListItem
                         key={`${item.name}+${item.sources}`}

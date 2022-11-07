@@ -1,11 +1,23 @@
 .player-input-container {
     font-family: "Cabin";
+    border: var(--baseBorder);
+    border-radius: var(--baseBorder-radius);
+}
+
+.player-input-label{
+    background-color: var(--boxTitleBackground);
+    border: var(--baseBorder);
+    border-radius: var(--baseBorder-radius);
+    color:var(--fontColor);
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    font-size: 150%;
 }
 
 .player-input-fields-container {
-    background: var(--boxTitleBackground);
-    border: var(--baseBorder);
-    border-radius: var(--baseBorder-radius);
+    background: var(--boxBackground);
     display: flex;
     font-family: "Cabin";
     font-size: 18px;
