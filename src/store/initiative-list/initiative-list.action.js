@@ -23,11 +23,17 @@ const addInitiativeItem = (initiativeListItems, itemToAdd) => {
     if (existingItem) {
         return initiativeListItems.map((listItem) =>
             listItem.name === itemToAdd.name
-                ? { ...listItem, quantity: listItem.quantity + 1 }
+                ? {
+                      ...listItem,
+                      quantity: listItem.quantity + 1,
+                  }
                 : listItem
         );
     }
-    return [...initiativeListItems, { ...itemToAdd, quantity: 1 }];
+    return [
+        ...initiativeListItems,
+        { ...itemToAdd, quantity: 1, isFocus: false },
+    ];
 };
 
 const removeInitiativeItem = (initiativeListItems, objectToSubtract) => {

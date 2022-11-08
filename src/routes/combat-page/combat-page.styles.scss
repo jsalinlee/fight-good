@@ -3,16 +3,18 @@
     display: flex;
     justify-content: space-around;
 
+    .combat-initiative-tracker-wrapper{
+        background-color: var(--boxBackground);
+        width:25vw;
+        height:70vh;
+
+    }
+
+    .combat-monster-stats-wrapper{
+        background-color: var(--boxBackground);
+        width:65vw;
+        height:70vh;
+    }
+
 }
 
-.combat-initiative-tracker-wrapper{
-    background-color: var(--boxBackground);
-    width:15vw;
-    height:70vh;
-}
-
-.combat-monster-stats-wrapper{
-    background-color: var(--boxBackground);
-    width:70vw;
-    height:70vh;
-}

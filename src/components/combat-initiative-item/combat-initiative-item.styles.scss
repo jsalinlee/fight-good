@@ -1,0 +1,28 @@
+.combat-initiative-item-wrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3px;
+    background-color: var(--itemBackground);
+    border: var(--itemBorder);
+    border-radius: var(--baseBorder-radius);
+    height: 10vh;
+}
+
+.combat-item-container{
+    display:flex;
+    justify-content: space-around;
+
+
+    .combat-initiative-item-name{
+        align-items: center;
+        width: 50vw;
+    }
+
+    .remove-from-combat-button{
+        align-items: center;
+        width: 20vw;
+    }
+
+}
+
