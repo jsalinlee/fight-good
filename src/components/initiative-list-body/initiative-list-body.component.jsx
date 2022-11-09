@@ -7,7 +7,8 @@ import './initiative-list-body.styles.scss';
 const InitiativeListBody = () => {
     const dispatch = useDispatch();
     const initiativeListItems = useSelector(selectInitiativeListItems);
-    const clearList = () => dispatch(clearAllInitiativeItems());
+    const clearList = () =>
+        dispatch(clearAllInitiativeItems(initiativeListItems));
 
     return (
         <div className='initiative-list-body-wrapper'>

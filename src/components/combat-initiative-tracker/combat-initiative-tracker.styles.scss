@@ -1,14 +1,29 @@
 .combat-tracker-wrapper{
+    //height: 100%;
+    box-sizing: border-box;
+    background-color: var(--boxBackground);
+    width:25vw;
+    height:75vh;
 
-}
+    border: var(--baseBorder);
+    border-radius: var(--baseBorder-radius);
+
+    display:flex;
+    flex-direction: column;
+
+    .combat-tracker-header-container{
+        position:sticky;
+        top:0;
+        background-color: var(--boxTitleBackground);
+            border: var(--baseBorder);
+            border-radius: var(--baseBorder-radius);
+            color:var(--fontColor);
 
 
-.combat-tracker-header-container{
-    position:sticky;
-    top:0;
-    background-color: var(--boxTitleBackground);
-        border: var(--baseBorder);
-        border-radius: var(--baseBorder-radius);
-        color:var(--fontColor);
+    }
 
+    .test-overflow{
+        height:100%;
+        overflow-y: auto;
+    }
 }

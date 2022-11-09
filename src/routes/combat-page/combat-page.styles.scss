@@ -2,18 +2,18 @@
     text-align: center;
     display: flex;
     justify-content: space-around;
+    height: 90vh;
+    padding-top:5%;
 
-    .combat-initiative-tracker-wrapper{
-        background-color: var(--boxBackground);
-        width:25vw;
-        height:70vh;
 
-    }
 
     .combat-monster-stats-wrapper{
         background-color: var(--boxBackground);
         width:65vw;
-        height:70vh;
+        height:75vh;
+        overflow-y: auto;
+        border: var(--baseBorder);
+        border-radius: var(--baseBorder-radius);
     }
 
 }

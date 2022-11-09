@@ -1,12 +1,23 @@
-.combat-initiative-item-wrapper{
+.combat-item-wrapper{
     display:flex;
     flex-direction: column;
     justify-content: space-around;
     margin: 3px;
+    border-radius: var(--baseBorder-radius);
+    height: 5vh;
+
+}
+
+.combat-item-unfocus{
     background-color: var(--itemBackground);
     border: var(--itemBorder);
+
+}
+
+.combat-item-focus{
+    background-color: green;
+    border: 1px solid yellowgreen;
     border-radius: var(--baseBorder-radius);
-    height: 10vh;
 }
 
 .combat-item-container{

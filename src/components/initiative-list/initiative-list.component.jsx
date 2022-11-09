@@ -3,16 +3,12 @@ import './initiative-list.styles.scss';
 
 const InitiativeList = () => {
     return (
-        <>
-            <div className='initiative-list-container'>
-                <div className='initiative-list-header'>
-                    <span className='initiative-list-title'>
-                        Initiative List
-                    </span>
-                </div>
-                <InitiativeListBody />
+        <div className='initiative-list-container'>
+            <div className='initiative-list-header'>
+                <span className='initiative-list-title'>Initiative List</span>
             </div>
-        </>
+            <InitiativeListBody />
+        </div>
     );
 };
 

@@ -12,12 +12,14 @@ const CombatInitiativeTracker = () => {
             <div className='combat-tracker-header-container'>
                 Initiative Tracker
             </div>
-            {CombatInitiativeItems.map((item) => (
-                <CombatInitiativeItem
-                    key={`${item.name}+${item.sources}`}
-                    item={item}
-                />
-            ))}
+            <div className='test-overflow'>
+                {CombatInitiativeItems.map((item) => (
+                    <CombatInitiativeItem
+                        key={`${item.name}+${item.sources}`}
+                        item={item}
+                    />
+                ))}
+            </div>
         </div>
     );
 };
