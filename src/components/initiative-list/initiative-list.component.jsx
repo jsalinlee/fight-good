@@ -19,10 +19,7 @@ const InitiativeList = () => {
                     </span>
                 </div>
                 {initiativeListItems.map((item) => (
-                    <InitiativeListItem
-                        key={`${item.name}+${item.sources}`}
-                        item={item}
-                    />
+                    <InitiativeListItem key={item.id} item={item} />
                 ))}
             </div>
             <button className='clear-list-button' onClick={clearList}>

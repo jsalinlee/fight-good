@@ -12,14 +12,16 @@ import { selectInitiativeListItems } from '../../store/initiative-list/initiativ
 import './initiative-list-item.styles.scss';
 
 const InitiativeListItem = ({ item }) => {
-    const { name, quantity } = item;
+    const { name, quantity, groupNum } = item;
     const dispatch = useDispatch();
     const listItems = useSelector(selectInitiativeListItems);
 
-    const addItemToList = () => dispatch(addItemToInitiative(listItems, item));
+    // (TODO) Use quantity action
+    // const addItemToList = () => dispatch(addItemToInitiative(listItems, item));
 
-    const subtractItemFromList = () =>
-        dispatch(removeItemFromInitiative(listItems, item));
+    // (TODO) Use quantity action
+    // const subtractItemFromList = () =>
+    //     dispatch(removeItemFromInitiative(listItems, item));
 
     const clearItemFromList = () =>
         dispatch(clearItemFromInitiative(listItems, item));
@@ -31,12 +33,12 @@ const InitiativeListItem = ({ item }) => {
 
     return (
         <div className='initiative-list-items-container'>
-            <div className='list-item-name'>{name}</div>
+            <div className='list-item-name'>
+                {name} Group {groupNum}
+            </div>
             <div className='initiative-list-action-bar'>
                 <div className='quantity-input-bar'>
-                    <button
-                        className='field-value-change'
-                        onClick={addItemToList}>
+                    <button className='field-value-change' onClick>
                         <b>+</b>
                     </button>
                     <input
@@ -45,9 +47,7 @@ const InitiativeListItem = ({ item }) => {
                         onChange={updateItemQuantity}
                         value={quantity}
                     />
-                    <button
-                        className='field-value-change'
-                        onClick={subtractItemFromList}>
+                    <button className='field-value-change' onClick>
                         <b>-</b>
                     </button>
                 </div>
