@@ -2,11 +2,17 @@ import { createAction } from '../../utils/reducer/reducer.utils';
 import { INITIATIVE_LIST_ACTION_TYPES } from './initiative-list.types';
 import { INITIATIVE_LIST_INITIAL_STATE } from './initiative-list.reducer';
 
+import CharacterGroup from '../../assets/js/CharacterGroup';
+import Character from '../../assets/js/Character';
+
 //CHANGE NAME BACK TO ID WHEN WE FIX IT
 const addInitiativeItem = (initiativeListItems, itemToAdd) => {
-    if (itemToAdd.hasOwnProperty('isPlayer')) {
+    const { name, ac, hp } = itemToAdd;
+
+    if (itemToAdd.isPlayer) {
+        const newPlayer = new CharacterGroup(name, true);
         const existingPlayer = initiativeListItems.find(
-            (listItem) => itemToAdd.name === listItem.name
+            (listItem) => newPlayer.name === listItem.name
         );
         if (existingPlayer) {
             alert(
@@ -14,40 +20,35 @@ const addInitiativeItem = (initiativeListItems, itemToAdd) => {
             );
             return initiativeListItems;
         }
-        return [...initiativeListItems, itemToAdd];
+        return [...initiativeListItems, newPlayer];
     }
-    const existingItem = initiativeListItems.find(
-        (listItem) => listItem.name === itemToAdd.name
-    );
 
+    const newGroup = new CharacterGroup(name);
+    newGroup.addCharacter(new Character(name, ac, hp, false));
+    const existingItem = initiativeListItems.findLast(
+        (listItem) => listItem.name === newGroup.name
+    );
     if (existingItem) {
-        return initiativeListItems.map((listItem) =>
-            listItem.name === itemToAdd.name
-                ? {
-                      ...listItem,
-                      quantity: listItem.quantity + 1,
-                  }
-                : listItem
-        );
+        return [
+            ...initiativeListItems,
+            { ...newGroup, groupNum: existingItem.groupNum + 1 },
+        ];
     }
-    return [
-        ...initiativeListItems,
-        { ...itemToAdd, quantity: 1, isFocus: false },
-    ];
+    return [...initiativeListItems, newGroup];
 };
 
 const removeInitiativeItem = (initiativeListItems, objectToSubtract) => {
     let newInitiativeList = initiativeListItems;
 
     newInitiativeList = initiativeListItems.filter((listItem) => {
-        if (listItem.name === objectToSubtract.name) {
+        if (listItem.id === objectToSubtract.id) {
             if (listItem.quantity - 1 <= 0) return false;
         }
         return true;
     });
 
     return newInitiativeList.map((listItem) =>
-        listItem.name === objectToSubtract.name
+        listItem.id === objectToSubtract.id
             ? { ...listItem, quantity: listItem.quantity - 1 }
             : listItem
     );
@@ -55,18 +56,18 @@ const removeInitiativeItem = (initiativeListItems, objectToSubtract) => {
 
 const updateInitiativeItem = (initiativeListItems, updatedItem) => {
     const existingItem = initiativeListItems.find(
-        (listItem) => updatedItem.name === listItem.name
+        (listItem) => updatedItem.id === listItem.id
     );
     if (existingItem) {
         return initiativeListItems.map((listItem) =>
-            listItem.name === updatedItem.name ? updatedItem : listItem
+            listItem.id === updatedItem.id ? updatedItem : listItem
         );
     }
 };
 
 const clearInitiativeItem = (initiativeListItems, objectToRemove) => {
     return initiativeListItems.filter(
-        (listItem) => listItem.name !== objectToRemove.name
+        (listItem) => listItem.id !== objectToRemove.id
     );
 };
 
