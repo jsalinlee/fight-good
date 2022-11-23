@@ -37,6 +37,28 @@ const addInitiativeItem = (initiativeListItems, itemToAdd) => {
     return [...initiativeListItems, newGroup];
 };
 
+const addQuantity = (initiativeListItems, itemToUpdate) => {
+    let newInitiativeList = initiativeListItems;
+
+    return newInitiativeList.map((listItem) => {
+        if (listItem.id === itemToUpdate.id) {
+            return {
+                ...listItem,
+                quantity: listItem.quantity + 1,
+                characters: [
+                    ...listItem.characters,
+                    new Character(
+                        listItem.name,
+                        listItem.ac,
+                        listItem.hp,
+                        listItem.isPlayer
+                    ),
+                ],
+            };
+        }
+    });
+};
+
 const removeInitiativeItem = (initiativeListItems, objectToSubtract) => {
     let newInitiativeList = initiativeListItems;
 
@@ -118,6 +140,14 @@ export const clearAllInitiativeItems = (listItem) => {
     if (window.confirm('Are you sure?'))
         newInitiativeList = INITIATIVE_LIST_INITIAL_STATE.initiativeListItems;
 
+    return createAction(
+        INITIATIVE_LIST_ACTION_TYPES.SET_INITIATIVE_LIST_ITEMS,
+        newInitiativeList
+    );
+};
+
+export const addObjectQuantity = (initiativeListItems, itemToUpdate) => {
+    const newInitiativeList = addQuantity(initiativeListItems, itemToUpdate);
     return createAction(
         INITIATIVE_LIST_ACTION_TYPES.SET_INITIATIVE_LIST_ITEMS,
         newInitiativeList

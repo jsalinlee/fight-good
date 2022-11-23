@@ -6,6 +6,7 @@ import {
     removeItemFromInitiative,
     updateItemInInitiative,
     clearItemFromInitiative,
+    addObjectQuantity,
 } from '../../store/initiative-list/initiative-list.action';
 import { selectInitiativeListItems } from '../../store/initiative-list/initiative-list.selector';
 
@@ -17,7 +18,7 @@ const InitiativeListItem = ({ item }) => {
     const listItems = useSelector(selectInitiativeListItems);
 
     // (TODO) Use quantity action
-    // const addItemToList = () => dispatch(addItemToInitiative(listItems, item));
+    const quantityAdd = () => dispatch(addObjectQuantity(listItems, item));
 
     // (TODO) Use quantity action
     // const subtractItemFromList = () =>
@@ -38,7 +39,9 @@ const InitiativeListItem = ({ item }) => {
             </div>
             <div className='initiative-list-action-bar'>
                 <div className='quantity-input-bar'>
-                    <button className='field-value-change' onClick>
+                    <button
+                        className='field-value-change'
+                        onClick={quantityAdd}>
                         <b>+</b>
                     </button>
                     <input
