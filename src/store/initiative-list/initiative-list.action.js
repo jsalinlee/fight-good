@@ -45,17 +45,9 @@ const addQuantity = (initiativeListItems, itemToUpdate) => {
             return {
                 ...listItem,
                 quantity: listItem.quantity + 1,
-                characters: [
-                    ...listItem.characters,
-                    new Character(
-                        listItem.name,
-                        listItem.ac,
-                        listItem.hp,
-                        listItem.isPlayer
-                    ),
-                ],
             };
         }
+        return listItem;
     });
 };
 

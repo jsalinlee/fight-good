@@ -21,8 +21,8 @@ const InitiativeListItem = ({ item }) => {
     const quantityAdd = () => dispatch(addObjectQuantity(listItems, item));
 
     // (TODO) Use quantity action
-    // const subtractItemFromList = () =>
-    //     dispatch(removeItemFromInitiative(listItems, item));
+    const subtractItemFromList = () =>
+        dispatch(removeItemFromInitiative(listItems, item));
 
     const clearItemFromList = () =>
         dispatch(clearItemFromInitiative(listItems, item));
@@ -65,7 +65,9 @@ const InitiativeListItem = ({ item }) => {
                         onChange={updateItemQuantity}
                         value={quantity}
                     />
-                    <button className='field-value-change' onClick>
+                    <button
+                        className='field-value-change'
+                        onClick={subtractItemFromList}>
                         <b>-</b>
                     </button>
                 </div>
