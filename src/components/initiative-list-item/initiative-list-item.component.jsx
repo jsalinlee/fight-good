@@ -13,7 +13,7 @@ import { selectInitiativeListItems } from '../../store/initiative-list/initiativ
 import './initiative-list-item.styles.scss';
 
 const InitiativeListItem = ({ item }) => {
-    const { name, quantity, groupNum } = item;
+    const { name, quantity, groupNum, isPlayer } = item;
     const dispatch = useDispatch();
     const listItems = useSelector(selectInitiativeListItems);
 
@@ -31,6 +31,21 @@ const InitiativeListItem = ({ item }) => {
         const updatedItem = { ...item, quantity: parseInt(event.target.value) };
         return dispatch(updateItemInInitiative(listItems, updatedItem));
     };
+
+    if (isPlayer) {
+        return (
+            <div className='initiative-list-items-container'>
+                <div className='list-item-name'>{name}</div>
+                <div className='initiative-list-action-bar'>
+                    <button
+                        className='item-delete-button'
+                        onClick={clearItemFromList}>
+                        <b>X</b>
+                    </button>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className='initiative-list-items-container'>
