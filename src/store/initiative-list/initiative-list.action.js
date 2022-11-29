@@ -59,6 +59,7 @@ const addQuantity = (initiativeListItems, itemToUpdate) => {
     });
 };
 
+//Convert to remove quantity
 const removeInitiativeItem = (initiativeListItems, objectToSubtract) => {
     let newInitiativeList = initiativeListItems;
 
