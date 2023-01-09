@@ -1,79 +1,52 @@
-.player-input-container {
+.player-input-wrapper {
     font-family: "Cabin";
     border: var(--baseBorder);
     border-radius: var(--baseBorder-radius);
+    margin-bottom: 30px;
 }
 
-.player-input-label{
+.player-input-header{
     background-color: var(--boxTitleBackground);
     border: var(--baseBorder);
     border-radius: var(--baseBorder-radius);
     color:var(--fontColor);
-    width:100%;
-    display:flex;
-    flex-direction: column;
-    align-items:center;
+    text-align: center;
     font-size: 150%;
 }
 
-.player-input-fields-container {
+.player-input-body {
     background: var(--boxBackground);
-    display: flex;
     font-family: "Cabin";
     font-size: 18px;
-    justify-content: space-between;
-    padding: 10px 20px;
-    width: 100%;
-    box-sizing: border-box;
 
     button {
-        height: 40px;
-        width: 40px;
-        margin: auto 0;
-        box-sizing: border-box;
-    }
-
-    .add-player {
-        font-size: 24px;
+        height: 30px;
+        width: 30px;
+        margin: auto;
+        background-image: url("../../assets/svg/Plus_symbol.svg");
+        background-size: cover;
+        background-position: center;
     }
 }
 
 
-.input-field-container {
+.player-input-field {
     text-align: left;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    padding: 10px 20px;
 
     .player-name-input {
         font-family: "Cabin";
         font-size: 14px;
-        padding: 10px;
-        width: 80%;
         outline: none;
     }
+}
+.player-input-initiative-field {
+    text-align: center;
+    padding: 10px 20px;
 
     .player-initiative-input {
         font-family: "Cabin";
         font-size: 14px;
-        height: 40px;
-        width: 40px;
-        box-sizing: border-box;
         text-align: center;
-        align-self: center;
-
-        &:focus {
-            outline: none;
-        }
-
-        // &::-webkit-outer-spin-button,
-        // &::-webkit-inner-spin-button {
-        //   -webkit-appearance: none;
-        //   margin: 0;
-        // }
-
-        &[type=number] {
-            -moz-appearance: textfield;
-        }
     }
 }

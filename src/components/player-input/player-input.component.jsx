@@ -41,10 +41,10 @@ const PlayerInput = () => {
     };
 
     return (
-        <div className='player-input-container'>
-            <div className='player-input-label'>Enter Player Initiatives</div>
-            <div className='player-input-fields-container'>
-                <div className='input-field-container'>
+        <div className='player-input-wrapper'>
+            <div className='player-input-header'>Enter Player Initiatives</div>
+            <div className='player-input-body row gx-0'>
+                <div className='player-input-field col-5'>
                     <label className='player-name-label'>Player Name</label>
                     <input
                         onChange={onPlayerNameChange}
@@ -54,21 +54,21 @@ const PlayerInput = () => {
                         value={player.name}
                     />
                 </div>
-                <div className='input-field-container'>
-                    <label className='player-initiative-label'>
+                <div className='player-input-initiative-field col-5'>
+                    <label className='player-initiative-label col-12'>
                         Initiative Roll
                     </label>
                     <input
                         onChange={onPlayerInitiativeChange}
-                        className='player-initiative-input'
+                        className='player-initiative-input w-50'
                         type='number'
                         placeholder='0'
                         value={player.initiative}
                     />
                 </div>
-                <button className='add-player' onClick={addPlayerToInitiative}>
-                    +
-                </button>
+                <button
+                    className='add-player btn btn-primary col-2'
+                    onClick={addPlayerToInitiative}></button>
             </div>
         </div>
     );
