@@ -1,12 +1,5 @@
 .initiative-list-container{
     background-color: var(--boxBackground);
-    margin: 0 auto;
-    width: 100%;
-    padding-bottom: 5px;
-    padding-top: 1px;
-    height: 100%;
-    overflow-y: auto;
-    overflow-x:hidden;
     border:var(--baseBorder);
     border-radius:var(--baseBorder-radius);
 
@@ -15,10 +8,7 @@
         border: var(--baseBorder);
         border-radius: var(--baseBorder-radius);
         color:var(--fontColor);
-        width:100%;
-        display:flex;
-        flex-direction: column;
-        align-items:center;
+        text-align: center;
 
         .initiative-list-title{
             font-size:150%;

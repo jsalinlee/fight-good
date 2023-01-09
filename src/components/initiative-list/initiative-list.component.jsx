@@ -22,7 +22,9 @@ const InitiativeList = () => {
                     <InitiativeListItem key={item.id} item={item} />
                 ))}
             </div>
-            <button className='clear-list-button' onClick={clearList}>
+            <button
+                className='clear-list-button btn btn-primary '
+                onClick={clearList}>
                 Delete List
             </button>
         </>
