@@ -146,9 +146,3 @@ export const addObjectQuantity = (initiativeListItems, itemToUpdate) => {
         newInitiativeList
     );
 };
-
-export const rollInitiative = (initiativeListItems) => {
-    for (let character of initiativeListItems) {
-        fetch()
-    }
-}
