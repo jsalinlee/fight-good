@@ -10,21 +10,25 @@ const InitiativeList = () => {
     const initiativeListItems = useSelector(selectInitiativeListItems);
     const clearList = () => dispatch(clearAllInitiativeItems());
     return (
-        <div>
-            <div className='initiative-list-container'>
+        <>
+            <div className='initiative-list-wrapper'>
                 <div className='initiative-list-header'>
                     <span className='initiative-list-title'>
                         Initiative List
                     </span>
                 </div>
-                {initiativeListItems.map((item) => (
-                    <InitiativeListItem key={item.id} item={item} />
-                ))}
+                <div className='initiative-list-body'>
+                    {initiativeListItems.map((item) => (
+                        <InitiativeListItem key={item.id} item={item} />
+                    ))}
+                    <button
+                        className='clear-list-button btn btn-danger '
+                        onClick={clearList}>
+                        Delete List
+                    </button>
+                </div>
             </div>
-            <button className='clear-list-button' onClick={clearList}>
-                Delete List
-            </button>
-        </div>
+        </>
     );
 };
 

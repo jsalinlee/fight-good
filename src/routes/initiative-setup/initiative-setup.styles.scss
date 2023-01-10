@@ -1,31 +1,21 @@
+.initiative-setup-wrapper {
+    height: 100vh;
+    padding: 50px;
+}
 
-.content-wrapper{
-    display:flex;
-    flex-direction: row;
-    align-items:flex-start;
-    height: 90vh;
-    justify-content: space-around;
-    padding-top: 2.5%;
+.content-wrapper {
+    height: 90%;
 
     .sidebar-container {
-        width: 25%;
-        display: flex;
+        display:flex;
         flex-direction: column;
-        justify-content: space-around;
-        //gap: 20px;
-        height: 100%;
-
     }
 
     .main-container {
-        width: 65%;
         height: 100%;
     }
 }
 
 .footer-wrapper {
-    button {
-        float: right;
-        margin-right:100px;
-    }
+    margin-top: 40px;
 }

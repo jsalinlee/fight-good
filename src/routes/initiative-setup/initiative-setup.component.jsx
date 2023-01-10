@@ -18,18 +18,23 @@ const InitiativeSetup = () => {
     };
 
     return (
-        <div className='initiative-setup-wrapper'>
-            <div className='content-wrapper'>
-                <div className='sidebar-container'>
+        <div className='initiative-setup-wrapper container-fluid'>
+            <div className='content-wrapper row'>
+                <div className='sidebar-container h-100 col-12 col-lg-4'>
                     <PlayerInput />
                     <InitiativeList />
                 </div>
-                <div className='main-container'>
+                <div className='main-container h-100 col-12 col-lg-8'>
                     <MonsterSearchBox />
                 </div>
             </div>
-            <div className='footer-wrapper'>
-                <button onClick={goToCombatHandler}>Start Combat</button>
+            <div className='footer-wrapper row justify-content-end'>
+                <button
+                    type='button'
+                    className='btn btn-primary col-2'
+                    onClick={goToCombatHandler}>
+                    Start Combat
+                </button>
             </div>
         </div>
     );

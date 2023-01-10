@@ -41,34 +41,32 @@ const PlayerInput = () => {
     };
 
     return (
-        <div className='player-input-container'>
-            <div className='player-input-label'>Enter Player Initiatives</div>
-            <div className='player-input-fields-container'>
-                <div className='input-field-container'>
+        <div className='player-input-wrapper'>
+            <div className='player-input-header'>Enter Player Initiatives</div>
+            <div className='player-input-body row gx-0'>
+                <div className='player-input-field col-6'>
                     <label className='player-name-label'>Player Name</label>
                     <input
                         onChange={onPlayerNameChange}
-                        className='player-name-input'
+                        className='player-name-input form-control'
                         type='text'
                         placeholder="Derrick Malon'Zo"
                         value={player.name}
                     />
                 </div>
-                <div className='input-field-container'>
-                    <label className='player-initiative-label'>
-                        Initiative Roll
-                    </label>
+                <div className='player-input-initiative-field col-4'>
+                    <label className='player-initiative-label'>Roll</label>
                     <input
                         onChange={onPlayerInitiativeChange}
-                        className='player-initiative-input'
+                        className='player-initiative-input form-control'
                         type='number'
                         placeholder='0'
                         value={player.initiative}
                     />
                 </div>
-                <button className='add-player' onClick={addPlayerToInitiative}>
-                    +
-                </button>
+                <button
+                    className='add-player btn btn-primary'
+                    onClick={addPlayerToInitiative}></button>
             </div>
         </div>
     );

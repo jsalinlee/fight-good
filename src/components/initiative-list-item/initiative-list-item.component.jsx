@@ -33,48 +33,45 @@ const InitiativeListItem = ({ item }) => {
 
     if (isPlayer) {
         return (
-            <div className='initiative-list-items-container'>
-                <div className='list-item-name'>{name}</div>
-                <div className='initiative-list-action-bar'>
+            <div className='initiative-list-item-wrapper container px-4 py-3'>
+                <div className='list-item-name row mb-1'>{name}</div>
+                <div className='initiative-list-action-bar row'>
+                    <div className='list-item-description col g-0 m-auto'>
+                        Initiative Roll: {isPlayer}
+                    </div>
                     <button
-                        className='item-delete-button'
-                        onClick={clearItemFromList}>
-                        <b>X</b>
-                    </button>
+                        className='btn btn-danger item-delete-button col-1'
+                        onClick={clearItemFromList}></button>
                 </div>
             </div>
         );
     }
 
     return (
-        <div className='initiative-list-items-container'>
-            <div className='list-item-name'>
+        <div className='initiative-list-item-wrapper container px-4 py-3'>
+            <div className='list-item-name row mb-1'>
                 {name} Group {groupNum}
             </div>
-            <div className='initiative-list-action-bar'>
-                <div className='quantity-input-bar'>
-                    <button
-                        className='field-value-change'
-                        onClick={quantityAdd}>
+            <div className='initiative-list-action-bar row'>
+                <div className='quantity-input-bar input-group col g-0 me-5'>
+                    <button className='btn btn-dark' onClick={quantityAdd}>
                         <b>+</b>
                     </button>
                     <input
-                        className='quantity-input-field'
+                        className='form-control'
                         type='number'
                         onChange={updateItemQuantity}
                         value={quantity}
                     />
                     <button
-                        className='field-value-change'
+                        className='btn btn-dark'
                         onClick={subtractItemFromList}>
                         <b>-</b>
                     </button>
                 </div>
                 <button
-                    className='item-delete-button'
-                    onClick={clearItemFromList}>
-                    <b>X</b>
-                </button>
+                    className='btn btn-danger item-delete-button col-1'
+                    onClick={clearItemFromList}></button>
             </div>
         </div>
     );
