@@ -20,7 +20,7 @@ const InitiativeSetup = () => {
     return (
         <div className='initiative-setup-wrapper container-fluid'>
             <div className='content-wrapper row'>
-                <div className='sidebar-container col-12 col-lg-4'>
+                <div className='sidebar-container h-100 col-12 col-lg-4'>
                     <PlayerInput />
                     <InitiativeList />
                 </div>
