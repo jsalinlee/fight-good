@@ -1,46 +1,23 @@
-.list-item-name{
+.list-item-name, .list-item-description{
     color:var(--fontColor);
     font-size:17px;
     font-weight:600;
 }
 
-.initiative-list-items-container {
+.initiative-list-item-wrapper {
     background-color: var(--itemBackground);
-    margin-left: 3px;
-    margin-right: 3px;
-    margin-top: 3px;
-    //padding-left: 15px;
-    padding: 15px;
     border:var(--itemBorder);
     border-radius:var(--baseBorder-radius);
-
-    .initiative-list-action-bar {
-        width: 100%;
-        display:flex;
-        justify-content:space-between;
-
-        .quantity-input-bar {
-            display: flex;
-        }
-    }
-}
-
-.quantity-input-field{
-    width: 50px;
-    margin-left: 5px;
-    margin-right: 5px;
 }
 
 .field-value-change{
-    margin-left: 5px;
-    margin-right: 5px;
     font-size: 20px;
-    color: green;
 }
 
-.item-delete-button{
-    margin-left: 90px;
-    margin-right: 5px;
-    font-size: 20px;
-    color: red;
+.item-delete-button {
+    height: 40px;
+    width: 40px;
+    background-image: url("../../assets/svg/trash_icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 }

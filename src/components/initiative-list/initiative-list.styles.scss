@@ -1,4 +1,8 @@
-.initiative-list-container{
+.initiative-list-wrapper {
+    flex: 1;
+    display:flex;
+    flex-direction: column;
+    overflow-y:auto;
     background-color: var(--boxBackground);
     border:var(--baseBorder);
     border-radius:var(--baseBorder-radius);
@@ -11,8 +15,19 @@
         text-align: center;
 
         .initiative-list-title{
-            font-size:150%;
+            font-size:26px;
         }
 
+    }
+
+    .initiative-list-body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow-y: auto;
+    }
+    .clear-list-button {
+        margin-top:auto;
     }
 }
