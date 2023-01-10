@@ -1,32 +1,23 @@
 .monster-search-item-container{
     background-color: var(--itemBackground);
-    font-size: 125%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin:1px;
-    padding-left: 3px;
-    padding-right:3px;
-    align-items:center;
     border:var(--itemBorder);
     border-radius: var(--baseBorder-radius);
 
 
 
     .monster-name{
-        width:60%;
+        font-size:larger;
         color:var(--fontColor);
     }
 
     .monster-cr, .monster-size, .monster-type{
         color:var(--fontColor);
-        width:20%;
 
     }
 
 
     .monster-add-to-list{
-        font-size:150%;
+        color: green;
     }
 
 }
