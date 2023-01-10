@@ -1,5 +1,6 @@
 .player-input-wrapper {
     font-family: "Cabin";
+    background: var(--boxBackground);
     border: var(--baseBorder);
     border-radius: var(--baseBorder-radius);
     margin-bottom: 30px;
@@ -15,7 +16,6 @@
 }
 
 .player-input-body {
-    background: var(--boxBackground);
     font-family: "Cabin";
     font-size: 18px;
 
@@ -40,13 +40,12 @@
         outline: none;
     }
 }
+
 .player-input-initiative-field {
-    text-align: center;
     padding: 10px 20px;
 
     .player-initiative-input {
         font-family: "Cabin";
         font-size: 14px;
-        text-align: center;
     }
 }
