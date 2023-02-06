@@ -4,6 +4,7 @@ const ItemDetailsContainer = ({ item }) => {
     return (
         <div>
             <div>
+                {console.log(item)}
                 <MonsterStatBlock item={item} />
             </div>
             <div>if group, show individual combatants as list</div>
